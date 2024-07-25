@@ -1,0 +1,836 @@
+[
+{
+    "gene_symbol": "0610005C13Rik"
+},
+{
+    "gene_symbol": "0610006L08Rik"
+},
+{
+    "gene_symbol": "0610009B22Rik"
+},
+{
+    "gene_symbol": "0610009E02Rik"
+},
+{
+    "gene_symbol": "0610009L18Rik"
+},
+{
+    "gene_symbol": "0610010F05Rik"
+},
+{
+    "gene_symbol": "0610010K14Rik"
+},
+{
+    "gene_symbol": "0610012D04Rik"
+},
+{
+    "gene_symbol": "0610012G03Rik"
+},
+{
+    "gene_symbol": "0610025J13Rik"
+},
+{
+    "gene_symbol": "0610030E20Rik"
+},
+{
+    "gene_symbol": "0610031O16Rik"
+},
+{
+    "gene_symbol": "0610033M10Rik"
+},
+{
+    "gene_symbol": "0610038B21Rik"
+},
+{
+    "gene_symbol": "0610039K10Rik"
+},
+{
+    "gene_symbol": "0610040B10Rik"
+},
+{
+    "gene_symbol": "0610040F04Rik"
+},
+{
+    "gene_symbol": "0610040J01Rik"
+},
+{
+    "gene_symbol": "0610043K17Rik"
+},
+{
+    "gene_symbol": "0710001A04Rik"
+},
+{
+    "gene_symbol": "1010001B22Rik"
+},
+{
+    "gene_symbol": "1100001I12Rik"
+},
+{
+    "gene_symbol": "1110002E22Rik"
+},
+{
+    "gene_symbol": "1110002J07Rik"
+},
+{
+    "gene_symbol": "1110002L01Rik"
+},
+{
+    "gene_symbol": "1110002O04Rik"
+},
+{
+    "gene_symbol": "1110003F10Rik"
+},
+{
+    "gene_symbol": "1110004F10Rik"
+},
+{
+    "gene_symbol": "1110006O24Rik"
+},
+{
+    "gene_symbol": "1110008E08Rik"
+},
+{
+    "gene_symbol": "1110012L19Rik"
+},
+{
+    "gene_symbol": "1110013H19Rik"
+},
+{
+    "gene_symbol": "1110015O18Rik"
+},
+{
+    "gene_symbol": "1110017D15Rik"
+},
+{
+    "gene_symbol": "1110018N20Rik"
+},
+{
+    "gene_symbol": "1110019B22Rik"
+},
+{
+    "gene_symbol": "1110019D14Rik"
+},
+{
+    "gene_symbol": "1110028F11Rik"
+},
+{
+    "gene_symbol": "1110028F18Rik"
+},
+{
+    "gene_symbol": "1110032A03Rik"
+},
+{
+    "gene_symbol": "1110032F04Rik"
+},
+{
+    "gene_symbol": "1110035H17Rik"
+},
+{
+    "gene_symbol": "1110038B12Rik"
+},
+{
+    "gene_symbol": "1110038F14Rik"
+},
+{
+    "gene_symbol": "1110046J04Rik"
+},
+{
+    "gene_symbol": "1110051M20Rik"
+},
+{
+    "gene_symbol": "1110057P08Rik"
+},
+{
+    "gene_symbol": "1110059E24Rik"
+},
+{
+    "gene_symbol": "1110059G10Rik"
+},
+{
+    "gene_symbol": "1110060G06Rik"
+},
+{
+    "gene_symbol": "1110065P20Rik"
+},
+{
+    "gene_symbol": "1190005I06Rik"
+},
+{
+    "gene_symbol": "1190007I07Rik"
+},
+{
+    "gene_symbol": "1200007C13Rik"
+},
+{
+    "gene_symbol": "1300002E11Rik"
+},
+{
+    "gene_symbol": "1300014J16Rik"
+},
+{
+    "gene_symbol": "1300017J02Rik"
+},
+{
+    "gene_symbol": "1500002C15Rik"
+},
+{
+    "gene_symbol": "1500002F19Rik"
+},
+{
+    "gene_symbol": "1500004A13Rik"
+},
+{
+    "gene_symbol": "1500005C15Rik"
+},
+{
+    "gene_symbol": "1500009C09Rik"
+},
+{
+    "gene_symbol": "1500009L16Rik"
+},
+{
+    "gene_symbol": "1500011B03Rik"
+},
+{
+    "gene_symbol": "1500012K07Rik"
+},
+{
+    "gene_symbol": "1500015A07Rik"
+},
+{
+    "gene_symbol": "1500015L24Rik"
+},
+{
+    "gene_symbol": "1500032F14Rik"
+},
+{
+    "gene_symbol": "1500035N22Rik"
+},
+{
+    "gene_symbol": "1520401A03Rik"
+},
+{
+    "gene_symbol": "1600002D24Rik"
+},
+{
+    "gene_symbol": "1600010M07Rik"
+},
+{
+    "gene_symbol": "1600012H06Rik"
+},
+{
+    "gene_symbol": "1600012P17Rik"
+},
+{
+    "gene_symbol": "1600014C10Rik"
+},
+{
+    "gene_symbol": "1600014C23Rik"
+},
+{
+    "gene_symbol": "1600017P15Rik"
+},
+{
+    "gene_symbol": "1600019K03Rik"
+},
+{
+    "gene_symbol": "1600020E01Rik"
+},
+{
+    "gene_symbol": "1600022D10Rik"
+},
+{
+    "gene_symbol": "1600023N17Rik"
+},
+{
+    "gene_symbol": "1600025M17Rik"
+},
+{
+    "gene_symbol": "1600027J07Rik"
+},
+{
+    "gene_symbol": "1600029O15Rik"
+},
+{
+    "gene_symbol": "1700001C19Rik"
+},
+{
+    "gene_symbol": "1700001D01Rik"
+},
+{
+    "gene_symbol": "1700001F09Rik"
+},
+{
+    "gene_symbol": "1700001G01Rik"
+},
+{
+    "gene_symbol": "1700001G11Rik"
+},
+{
+    "gene_symbol": "1700001G17Rik"
+},
+{
+    "gene_symbol": "1700001J03Rik"
+},
+{
+    "gene_symbol": "1700001J04Rik"
+},
+{
+    "gene_symbol": "1700001J11Rik"
+},
+{
+    "gene_symbol": "1700001K19Rik"
+},
+{
+    "gene_symbol": "1700001K23Rik"
+},
+{
+    "gene_symbol": "1700001L05Rik"
+},
+{
+    "gene_symbol": "1700001L19Rik"
+},
+{
+    "gene_symbol": "1700001O22Rik"
+},
+{
+    "gene_symbol": "1700003C15Rik"
+},
+{
+    "gene_symbol": "1700003D09Rik"
+},
+{
+    "gene_symbol": "1700003E16Rik"
+},
+{
+    "gene_symbol": "1700003E24Rik"
+},
+{
+    "gene_symbol": "1700003F12Rik"
+},
+{
+    "gene_symbol": "1700003G18Rik"
+},
+{
+    "gene_symbol": "1700003H04Rik"
+},
+{
+    "gene_symbol": "1700003I16Rik"
+},
+{
+    "gene_symbol": "1700003I22Rik"
+},
+{
+    "gene_symbol": "1700003L19Rik"
+},
+{
+    "gene_symbol": "1700003M07Rik"
+},
+{
+    "gene_symbol": "1700003N22Rik"
+},
+{
+    "gene_symbol": "1700003O11Rik"
+},
+{
+    "gene_symbol": "1700003P14Rik"
+},
+{
+    "gene_symbol": "1700006A11Rik"
+},
+{
+    "gene_symbol": "1700006F04Rik"
+},
+{
+    "gene_symbol": "1700006H21Rik"
+},
+{
+    "gene_symbol": "1700006J14Rik"
+},
+{
+    "gene_symbol": "1700006P03Rik"
+},
+{
+    "gene_symbol": "1700007E05Rik"
+},
+{
+    "gene_symbol": "1700007F19Rik"
+},
+{
+    "gene_symbol": "1700007H22Rik"
+},
+{
+    "gene_symbol": "1700007J10Rik"
+},
+{
+    "gene_symbol": "1700007K13Rik"
+},
+{
+    "gene_symbol": "1700007L15Rik"
+},
+{
+    "gene_symbol": "1700007M16Rik"
+},
+{
+    "gene_symbol": "1700007P06Rik"
+},
+{
+    "gene_symbol": "1700008A23Rik"
+},
+{
+    "gene_symbol": "1700008C04Rik"
+},
+{
+    "gene_symbol": "1700008H02Rik"
+},
+{
+    "gene_symbol": "1700008J07Rik"
+},
+{
+    "gene_symbol": "1700008K24Rik"
+},
+{
+    "gene_symbol": "1700008N11Rik"
+},
+{
+    "gene_symbol": "1700008O03Rik"
+},
+{
+    "gene_symbol": "1700008P02Rik"
+},
+{
+    "gene_symbol": "1700009C05Rik"
+},
+{
+    "gene_symbol": "1700009J07Rik"
+},
+{
+    "gene_symbol": "1700009N14Rik"
+},
+{
+    "gene_symbol": "1700010B08Rik"
+},
+{
+    "gene_symbol": "1700010B13Rik"
+},
+{
+    "gene_symbol": "1700010D01Rik"
+},
+{
+    "gene_symbol": "1700010G06Rik"
+},
+{
+    "gene_symbol": "1700010H22Rik"
+},
+{
+    "gene_symbol": "1700010I02Rik"
+},
+{
+    "gene_symbol": "1700010I14Rik"
+},
+{
+    "gene_symbol": "1700010J16Rik"
+},
+{
+    "gene_symbol": "1700010K23Rik"
+},
+{
+    "gene_symbol": "1700010K24Rik"
+},
+{
+    "gene_symbol": "1700010L04Rik"
+},
+{
+    "gene_symbol": "1700010N08Rik"
+},
+{
+    "gene_symbol": "1700011B04Rik"
+},
+{
+    "gene_symbol": "1700011C11Rik"
+},
+{
+    "gene_symbol": "1700011D18Rik"
+},
+{
+    "gene_symbol": "1700011L22Rik"
+},
+{
+    "gene_symbol": "1700011M02Rik"
+},
+{
+    "gene_symbol": "1700012B07Rik"
+},
+{
+    "gene_symbol": "1700012B09Rik"
+},
+{
+    "gene_symbol": "1700012C08Rik"
+},
+{
+    "gene_symbol": "1700012C14Rik"
+},
+{
+    "gene_symbol": "1700012D14Rik"
+},
+{
+    "gene_symbol": "1700012D16Rik"
+},
+{
+    "gene_symbol": "1700012E03Rik"
+},
+{
+    "gene_symbol": "1700012I11Rik"
+},
+{
+    "gene_symbol": "1700012J22Rik"
+},
+{
+    "gene_symbol": "1700012P22Rik"
+},
+{
+    "gene_symbol": "1700013A02Rik"
+},
+{
+    "gene_symbol": "1700013F07Rik"
+},
+{
+    "gene_symbol": "1700013G24Rik"
+},
+{
+    "gene_symbol": "1700013H16Rik"
+},
+{
+    "gene_symbol": "1700013M08Rik"
+},
+{
+    "gene_symbol": "1700014D04Rik"
+},
+{
+    "gene_symbol": "1700014F14Rik"
+},
+{
+    "gene_symbol": "1700014L14Rik"
+},
+{
+    "gene_symbol": "1700015C15Rik"
+},
+{
+    "gene_symbol": "1700015C17Rik"
+},
+{
+    "gene_symbol": "1700015F17Rik"
+},
+{
+    "gene_symbol": "1700015G11Rik"
+},
+{
+    "gene_symbol": "1700015H07Rik"
+},
+{
+    "gene_symbol": "1700015I17Rik"
+},
+{
+    "gene_symbol": "1700015O11Rik"
+},
+{
+    "gene_symbol": "1700016A09Rik"
+},
+{
+    "gene_symbol": "1700016B01Rik"
+},
+{
+    "gene_symbol": "1700016B15Rik"
+},
+{
+    "gene_symbol": "1700016C15Rik"
+},
+{
+    "gene_symbol": "1700016D06Rik"
+},
+{
+    "gene_symbol": "1700016D08Rik"
+},
+{
+    "gene_symbol": "1700016F12Rik"
+},
+{
+    "gene_symbol": "1700016G22Rik"
+},
+{
+    "gene_symbol": "1700016H03Rik"
+},
+{
+    "gene_symbol": "1700016H13Rik"
+},
+{
+    "gene_symbol": "1700016J18Rik"
+},
+{
+    "gene_symbol": "1700016K19Rik"
+},
+{
+    "gene_symbol": "1700016L21Rik"
+},
+{
+    "gene_symbol": "1700016P03Rik"
+},
+{
+    "gene_symbol": "1700016P04Rik"
+},
+{
+    "gene_symbol": "1700017B05Rik"
+},
+{
+    "gene_symbol": "1700017G19Rik"
+},
+{
+    "gene_symbol": "1700017I07Rik"
+},
+{
+    "gene_symbol": "1700017J07Rik"
+},
+{
+    "gene_symbol": "1700017L05Rik"
+},
+{
+    "gene_symbol": "1700017M07Rik"
+},
+{
+    "gene_symbol": "1700017N19Rik"
+},
+{
+    "gene_symbol": "1700018A04Rik"
+},
+{
+    "gene_symbol": "1700018A14Rik"
+},
+{
+    "gene_symbol": "1700018A23Rik"
+},
+{
+    "gene_symbol": "1700018B08Rik"
+},
+{
+    "gene_symbol": "1700018B24Rik"
+},
+{
+    "gene_symbol": "1700018F24Rik"
+},
+{
+    "gene_symbol": "1700018G05Rik"
+},
+{
+    "gene_symbol": "1700018L02Rik"
+},
+{
+    "gene_symbol": "1700018M17Rik"
+},
+{
+    "gene_symbol": "1700018P08Rik"
+},
+{
+    "gene_symbol": "1700019A02Rik"
+},
+{
+    "gene_symbol": "1700019A23Rik"
+},
+{
+    "gene_symbol": "1700019C18Rik"
+},
+{
+    "gene_symbol": "1700019D03Rik"
+},
+{
+    "gene_symbol": "1700019E08Rik"
+},
+{
+    "gene_symbol": "1700019F05Rik"
+},
+{
+    "gene_symbol": "1700019J19Rik"
+},
+{
+    "gene_symbol": "1700019L13Rik"
+},
+{
+    "gene_symbol": "1700019N19Rik"
+},
+{
+    "gene_symbol": "1700019P21Rik"
+},
+{
+    "gene_symbol": "1700020A23Rik"
+},
+{
+    "gene_symbol": "1700020D05Rik"
+},
+{
+    "gene_symbol": "1700020D12Rik"
+},
+{
+    "gene_symbol": "1700020G03Rik"
+},
+{
+    "gene_symbol": "1700020G17Rik"
+},
+{
+    "gene_symbol": "1700020L24Rik"
+},
+{
+    "gene_symbol": "1700020M21Rik"
+},
+{
+    "gene_symbol": "1700020N18Rik"
+},
+{
+    "gene_symbol": "1700021A07Rik"
+},
+{
+    "gene_symbol": "1700021F02Rik"
+},
+{
+    "gene_symbol": "1700021F07Rik"
+},
+{
+    "gene_symbol": "1700021F13Rik"
+},
+{
+    "gene_symbol": "1700021G15Rik"
+},
+{
+    "gene_symbol": "1700021J08Rik"
+},
+{
+    "gene_symbol": "1700021L23Rik"
+},
+{
+    "gene_symbol": "1700021N21Rik"
+},
+{
+    "gene_symbol": "1700021P04Rik"
+},
+{
+    "gene_symbol": "1700022A21Rik"
+},
+{
+    "gene_symbol": "1700022A22Rik"
+},
+{
+    "gene_symbol": "1700022E09Rik"
+},
+{
+    "gene_symbol": "1700022H01Rik"
+},
+{
+    "gene_symbol": "1700022H16Rik"
+},
+{
+    "gene_symbol": "1700022I11Rik"
+},
+{
+    "gene_symbol": "1700022N22Rik"
+},
+{
+    "gene_symbol": "1700023B13Rik"
+},
+{
+    "gene_symbol": "1700023C21Rik"
+},
+{
+    "gene_symbol": "1700023F02Rik"
+},
+{
+    "gene_symbol": "1700023G09Rik"
+},
+{
+    "gene_symbol": "1700023H06Rik"
+},
+{
+    "gene_symbol": "1700024B05Rik"
+},
+{
+    "gene_symbol": "1700024B18Rik"
+},
+{
+    "gene_symbol": "1700024G13Rik"
+},
+{
+    "gene_symbol": "1700024I08Rik"
+},
+{
+    "gene_symbol": "1700024J04Rik"
+},
+{
+    "gene_symbol": "1700025A08Rik"
+},
+{
+    "gene_symbol": "1700025B11Rik"
+},
+{
+    "gene_symbol": "1700025D23Rik"
+},
+{
+    "gene_symbol": "1700025F24Rik"
+},
+{
+    "gene_symbol": "1700025G04Rik"
+},
+{
+    "gene_symbol": "1700025H01Rik"
+},
+{
+    "gene_symbol": "1700025J12Rik"
+},
+{
+    "gene_symbol": "1700025K04Rik"
+},
+{
+    "gene_symbol": "1700025K24Rik"
+},
+{
+    "gene_symbol": "1700025L06Rik"
+},
+{
+    "gene_symbol": "1700025M24Rik"
+},
+{
+    "gene_symbol": "1700025N21Rik"
+},
+{
+    "gene_symbol": "1700025N23Rik"
+},
+{
+    "gene_symbol": "1700025O08Rik"
+},
+{
+    "gene_symbol": "1700026D11Rik"
+},
+{
+    "gene_symbol": "1700026F02Rik"
+},
+{
+    "gene_symbol": "1700026J12Rik"
+},
+{
+    "gene_symbol": "1700026N04Rik"
+},
+{
+    "gene_symbol": "1700027A07Rik"
+},
+{
+    "gene_symbol": "1700027A15Rik"
+},
+{
+    "gene_symbol": "1700027F06Rik"
+},
+{
+    "gene_symbol": "1700027F09Rik"
+},
+{
+    "gene_symbol": "1700027H10Rik"
+},
+{
+    "gene_symbol": "1700027I24Rik"
+}
+]
