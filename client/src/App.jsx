@@ -5,8 +5,8 @@ import { SAGE3Plugin } from "https://unpkg.com/@sage3/sageplugin@0.0.15/src/lib/
 import axios from 'axios'
 
 const App = () => {
-    const defaultRows = 300;
-    const defaultColumns = 18;
+    const defaultRows = 400;
+    const defaultColumns = 10;
     const defaultCValue = 0.3;
     const cValueChoices = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 
@@ -331,13 +331,14 @@ const App = () => {
           {/* HEADER */}
           <div className='header'>
             <div className='heatmap-header'>
-            <h1> {isNormMapDisplayed ? 'Normalized Gene Color Map' : 'Gene Activation Map'}</h1>
-            <p>{trimmedRows} rows x {trimmedColumns} columns </p>
+            <h1> {isNormMapDisplayed ? 'Normalized Gene Color Map' : 'Gene Activation Percentage Matrix'}</h1>
+            <p>Rows: {trimmedRows} </p>
+            <p>Columns: {trimmedColumns}</p>
             </div>
 
             <div className='menubar'>
               <div className='tab-container'>
-                <div class='tab active' onClick={(event) => handleTabClick(event, "geneActivationMap")}>Gene Activation Map</div>
+                <div class='tab active' onClick={(event) => handleTabClick(event, "geneActivationMap")}>Gene Activation Percentage Matrix</div>
                 <div class='tab' onClick={(event) => handleTabClick(event, "normalizedMap")}>Normalized Map</div>
               </div>
               <button className= 'dropdown-button' onClick= {(event) => toggleDropDown(event)}>
