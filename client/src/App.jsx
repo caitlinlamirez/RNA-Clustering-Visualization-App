@@ -7,7 +7,7 @@ import axios from 'axios'
 const App = () => {
     const defaultRows = 400;
     const defaultColumns = 10;
-    const defaultCValue = 0.3;
+    const defaultCValue = 0.1;
     const cValueChoices = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 
     const svgRef = useRef(null);
@@ -104,8 +104,8 @@ const App = () => {
       const labelSpacing = 27;
       const rectSpacing = 27;
       const margin = { top: 120 + translateAmount, right: 20, bottom: 5, left: 115 };
-      const width = (trimmedColumns * (rectSize + rectSpacing) + margin.left + margin.right);
-      const height = (trimmedRows * (rectSize + rectSpacing) + margin.top + margin.bottom );
+      const height = (trimmedColumns * (rectSize + rectSpacing));
+      const width = (trimmedRows * (rectSize + rectSpacing));
 
       // ----------------------------------------------
       const customColorScale = d3.scaleLinear()
@@ -131,14 +131,14 @@ const App = () => {
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-      // Add row labels
+      // Add row labels (NOTE: these are switched, so the row labels actually display the original dataset's columns)
       const rowLabelsGroup = svg.append("g")
       .attr("class", "row-labels"); 
       rowLabelsGroup.selectAll("text")
-        .data(Array.from(rowLabels))
+        .data(Array.from(columnLabels))
         .enter()
         .append("text")
-        .text((d, i) => `${geneSet.indexOf(d)}: ${d}`)
+        .text((d, i) => `${tissueLineageSet.indexOf(d)}: ${d}`)
         .attr("x", - margin.left + 15)
         .attr("y", (d, i) => i * labelSpacing + labelSpacing / 2)
         .style("text-anchor", "start")
@@ -146,14 +146,14 @@ const App = () => {
         .style("font-size", "10px")
         .attr("fill", "black");
 
-      // Addd column Labels
+      // Add column Labels (NOTE: these are switched, so the column labels actually display the original dataset's rows)
       const columnLabelsGroup = svg.append("g")
         .attr("class", "column-labels");
       columnLabelsGroup.selectAll("text")
-        .data(Array.from(columnLabels))
+        .data(Array.from(rowLabels))
         .enter()
         .append("text")
-        .text((d, i) => `${tissueLineageSet.indexOf(d)}: ${d}`)
+        .text((d, i) => `${geneSet.indexOf(d)}: ${d}`)
         .attr("x", (d, i) => labelSpacing) // Adjust the x position for column labels
         .attr("y", 15) // Adjust the y position for column labels
         .style("text-anchor", "start")
@@ -169,8 +169,8 @@ const App = () => {
         .enter()
         .append("rect")
         // Multiply the following by scale factors to adjust space between the cells
-        .attr("x", (d, i) => Math.floor(i / trimmedRows) * rectSpacing) // Set x based on the row index
-        .attr("y", (d, i) => (i % trimmedRows) * rectSpacing) // Set y based on the column index
+        .attr("x", (d, i) => (i % trimmedRows) * rectSpacing) // Set x based on the column index
+        .attr("y", (d, i) => Math.floor(i / trimmedRows) * rectSpacing) // Set y based on the row index
         .attr("rx", 0.5)
         .attr("ry", 0.5)
         // Adjust rectangle size
@@ -428,12 +428,12 @@ const App = () => {
         <div className='visualization-container'>
           <div className='visualization-body'>
             <div className='xLabel'>
-              <h2>Tissue Lineages</h2>
+              <h2>Gene Symbols</h2>
             </div>
 
           <div className='matrix-container'>
             <div className='yLabel'>
-              <h2>Gene Symbols</h2>
+              <h2>Tissue Lineages</h2>
             </div>
             
             <div className='heatmap-scrollable'>
