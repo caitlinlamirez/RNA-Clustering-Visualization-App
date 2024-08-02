@@ -96,16 +96,16 @@ const App = () => {
     // useEffect to create actual matrix 
     useEffect(() => {
       // Check if any label has 22 or more characters
-      const isLabelTooLong = columnLabels.some(label => label.length >= 22);
+      const isLabelTooLong = rowLabels.some(label => label.length >= 22);
       const translateAmount = isLabelTooLong ? 120 : 0;
 
       // Define constants
       const rectSize = 25;
       const labelSpacing = 27;
       const rectSpacing = 27;
-      const margin = { top: 120 + translateAmount, right: 20, bottom: 5, left: 115 };
-      const height = (trimmedColumns * (rectSize + rectSpacing));
-      const width = (trimmedRows * (rectSize + rectSpacing));
+      const margin = { top: 120 , right: 20, bottom: 10, left: 100 + translateAmount };
+      const height = (trimmedColumns * (rectSize + rectSpacing) * 1);
+      const width = (trimmedRows * (rectSize + rectSpacing)) * 0.57;
 
       // ----------------------------------------------
       const customColorScale = d3.scaleLinear()
@@ -126,7 +126,7 @@ const App = () => {
     
       // Create the SVG container
       const svg = d3.select(svgRef.current)
-        .attr("width", (width + margin.right))
+        .attr("width", (width))
         .attr("height", height )
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -139,7 +139,7 @@ const App = () => {
         .enter()
         .append("text")
         .text((d, i) => `${tissueLineageSet.indexOf(d)}: ${d}`)
-        .attr("x", - margin.left + 15)
+        .attr("x", - margin.left)
         .attr("y", (d, i) => i * labelSpacing + labelSpacing / 2)
         .style("text-anchor", "start")
         .style("alignment-baseline", "middle")

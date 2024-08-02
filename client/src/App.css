@@ -9,8 +9,9 @@ body {
 
 .app-container {
   background-color: #ffffff;
-  width: 1200px;
+  width:fit-content;
   border-radius: 10px 10px 10px 10px;
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 .header {
@@ -90,9 +91,6 @@ text {
   overflow-y: auto; /* Makes it scrollable*/
 }
 
-.heatmap-container {
-  overflow: hidden; /* hide any content that overflows */
-}
 
 .heatmap-scrollable {
   overflow-x: auto; /* Makes it scrollable*/
@@ -192,7 +190,7 @@ text {
 
 .matrix-container{
   align-items: center;
-  overflow-x: auto; /* Makes it scrollable*/
+  overflow-x: auto; /* Makes it scrollable when needed */
   display:flex;
   width: 100%; /* Width greater than the container width to enable scrolling */
   height: 100%; /* Ensure it fills the container height */
