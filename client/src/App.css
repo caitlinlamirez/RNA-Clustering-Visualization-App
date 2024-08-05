@@ -9,9 +9,17 @@ body {
 
 .app-container {
   background-color: #ffffff;
-  width:fit-content;
+  max-width:fit-content;
+  width: 100%;
   border-radius: 10px 10px 10px 10px;
   margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
 }
 
 .header {
@@ -33,7 +41,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: #333;
-  pointer-events: none; /
+  pointer-events: none;
 }
 
 .graph {
@@ -93,12 +101,30 @@ text {
 
 
 .heatmap-scrollable {
-  overflow-x: auto; /* Makes it scrollable*/
-  overflow-y: auto; /* Makes it scrollable*/
-  height: 475px; 
-  max-width: 950px;
-  width: fit-content;
-  margin-bottom: 10px;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  overflow-y: auto; /* Allows vertical scrolling if needed */
+  height: 440px; /* Fixed height for the container */
+  max-width: 100%; /* Make the container responsive with a max-width of 100% */
+  width: 100%; /* Full width of the parent container */
+  margin-bottom: 10px; /* Space below the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  justify-content: center; /* Center the SVG horizontally within the container */
+  align-items: center;
+}
+
+/* Ensure SVG scales properly */
+.heatmap-scrollable svg {
+  max-width: 1000%; /* Scale the SVG to fit within the container */
+  height: auto; /* Maintain the SVG’s aspect ratio */
+  display: block; /* Ensure the SVG is treated as a block-level element */
+}
+
+
+/* Optional: Media query for smaller screens */
+@media (max-width: 768px) {
+  .heatmap-scrollable {
+    height: 300px; /* Adjust height for smaller screens */
+  }
 }
 
 .dropdown-content {
@@ -220,7 +246,7 @@ text {
   font-family: 'Roboto', sans-serif;
   justify-content: center;
   display: flex;
-  margin-bottom: -10px;
+  margin-bottom: -30px;
 }
 .right-container {
   width:200px;

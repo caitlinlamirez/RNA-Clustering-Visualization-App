@@ -331,7 +331,7 @@ const App = () => {
           {/* HEADER */}
           <div className='header'>
             <div className='heatmap-header'>
-            <h1> {isNormMapDisplayed ? 'Normalized Gene Color Map' : 'Gene Activation Percentage Matrix'}</h1>
+            <h1> {isNormMapDisplayed ? 'Normalized Gene Color Map' : 'Gene Expression Percentage Matrix'}</h1>
             <p>Rows: {trimmedRows} </p>
             <p>Columns: {trimmedColumns}</p>
             </div>
