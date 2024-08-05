@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
   build: {
-    outDir: `./dist/sage3_plugin_app`,
+    outDir: `./dist/cluster_visualization_app`,
   },
 })
+

@@ -109,7 +109,7 @@ async function processSingleRequest(request) {
 
 
 // getValues --> Returns dictionary of objects containing selected ranges of tissueLineages and geneSymbols
-router.get('/searchRanges', async (req, res) => {
+router.get('/searchRanges2', async (req, res) => {
   try {
     // Parse start and end values for rows and columns from query parameters
     const tissueLineagesStart = parseInt(req.query.tissueLineagesStart) || 0;
