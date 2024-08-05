@@ -42,7 +42,7 @@ async function processSingleRequest(request) {
 }
 
 // getValues --> Returns dictionary of objects containing selected ranges of tissueLineages and geneSymbols
-router.post('/searchRanges', async (req, res) => {
+router.get('/searchRanges', async (req, res) => {
   try {
     // Get query parameters
     const tissueLineages = req.query.tissueLineages || [];
