@@ -110,9 +110,9 @@ router.get('/searchRanges2', async (req, res) => {
   try {
     // Parse start and end values for rows and columns from query parameters
     const tissueLineagesStart = parseInt(req.query.tissueLineagesStart) || 0;
-    const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd) || 0;
+    const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd + 1) || 0;
     const geneSymbolsStart = parseInt(req.query.geneSymbolsStart) || 0;
-    const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd) || 0;
+    const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd + 1) || 0;
     const c_value = parseFloat(req.query.c_value);
 
     // Fetch all unique tissueLineages and geneSymbols from the database

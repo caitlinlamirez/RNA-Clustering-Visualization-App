@@ -8,7 +8,7 @@ const apiUrl = "https://rna-clustering-visualization-app-production.up.railway.a
 const App = () => {
     const defaultRows = 400;
     const defaultColumns = 10;
-    const defaultCValue = 0.1;
+    const defaultCValue = 0;
     const cValueChoices = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 
     const svgRef = useRef(null);
@@ -257,10 +257,12 @@ const App = () => {
         : [];
 
       // Make a GET request to the server with the query parameters
-      axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges', {
+      axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges2', {
           params: {
-            tissueLineages: newColRange,
-            geneSymbols: newRowRange,
+            tissueLineagesStart: start2,
+            tissueLineagesEnd: end2,
+            geneSymbolsStart: start1,
+            geneSymbolsEnd: end1,
             c_value: selectedCValue
           }
         })

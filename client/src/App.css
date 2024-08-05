@@ -105,7 +105,7 @@ text {
   overflow-y: auto; /* Allows vertical scrolling if needed */
   height: 440px; /* Fixed height for the container */
   max-width: 100%; /* Make the container responsive with a max-width of 100% */
-  width: 100%; /* Full width of the parent container */
+  width: 500%; /* Full width of the parent container */
   margin-bottom: 10px; /* Space below the container */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   justify-content: center; /* Center the SVG horizontally within the container */
@@ -115,6 +115,7 @@ text {
 /* Ensure SVG scales properly */
 .heatmap-scrollable svg {
   max-width: 1000%; /* Scale the SVG to fit within the container */
+  min-width: 1000%;
   height: auto; /* Maintain the SVG’s aspect ratio */
   display: block; /* Ensure the SVG is treated as a block-level element */
 }
