@@ -111,18 +111,18 @@ router.get('/searchRanges2', async (req, res) => {
   try {
     // Parse start and end values for rows and columns from query parameters
     const tissueLineagesStart = parseInt(req.query.tissueLineagesStart) || 0;
-    const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd + 1) || 0;
+    const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd) || 0;
     const geneSymbolsStart = parseInt(req.query.geneSymbolsStart) || 0;
     const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd) || 0;
     const c_value = parseFloat(req.query.c_value);
 
-    // Fetch all unique tissueLineages and geneSymbols from the database
-    const allTissueLineages = await RnaModel.distinct('lineage');
-    const allGeneSymbols = await RnaModel.distinct('gene_symbol');
+    // Get distinct gene symbols and tissue lineages
+    const distinctGeneSymbols = await RnaModel.find({}).distinct('gene_symbol').sort({index:1});
+    const distinctTissueLineages = await RnaModel.find({}).distinct('lineage').sort({index:1});
 
     // Slice the arrays based on start and end values
-    const tissueLineages = allTissueLineages.slice(tissueLineagesStart, tissueLineagesEnd);
-    const geneSymbols = allGeneSymbols.slice(geneSymbolsStart, geneSymbolsEnd);
+    const tissueLineages = distinctTissueLineages.slice(tissueLineagesStart, tissueLineagesEnd);
+    const geneSymbols = distinctGeneSymbols.slice(geneSymbolsStart, geneSymbolsEnd);
 
     // Get map that contain the specified ranges
     const slicedMapData = await RnaModel.find({

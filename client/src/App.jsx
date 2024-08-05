@@ -257,12 +257,12 @@ const App = () => {
         : [];
 
       // Make a GET request to the server with the query parameters
-      axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges', {
+      axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges2', {
           params: {
-            tissueLineagesStart: start2,
-            tissueLineagesEnd: end2,
             geneSymbolsStart: start1,
             geneSymbolsEnd: end1,
+            tissueLineagesStart: start2,
+            tissueLineagesEnd: end2,
             c_value: selectedCValue
           }
         })
