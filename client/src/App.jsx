@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { SAGE3Plugin } from "https://unpkg.com/@sage3/sageplugin@0.0.15/src/lib/sageplugin.js";
 import axios from 'axios'
+const apiUrl = "https://rna-clustering-visualization-app-production.up.railway.app/"
 
 const App = () => {
     const defaultRows = 400;
@@ -57,7 +58,7 @@ const App = () => {
             setNormalizedMap(default_normalized_map);
           } else {
             // If data is not stored, fetch it from the server
-            const response = await axios.get('http://localhost:3005/values/getDefaultData', {
+            const response = await axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/getDefaultData', {
               params: {
                 rows: trimmedRows,
                 columns: trimmedColumns,
@@ -256,7 +257,7 @@ const App = () => {
         : [];
 
       // Make a GET request to the server with the query parameters
-      axios.get('http://localhost:3005/values/searchRanges', {
+      axios.post('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges', {
           params: {
             tissueLineages: newColRange,
             geneSymbols: newRowRange,

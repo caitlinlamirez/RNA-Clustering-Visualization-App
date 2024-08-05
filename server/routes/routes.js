@@ -7,6 +7,8 @@ import startCluster from './cluster.js';
 
 
 const router = express.Router(); // Sets up Express router
+
+
 // batch --> Allows user to batch multiple API Requests at once
 router.post('/batch', async (req, res) => {
   const batchRequests = req.body;
@@ -40,7 +42,7 @@ async function processSingleRequest(request) {
 }
 
 // getValues --> Returns dictionary of objects containing selected ranges of tissueLineages and geneSymbols
-router.get('/searchRanges', async (req, res) => {
+router.post('/searchRanges', async (req, res) => {
   try {
     // Get query parameters
     const tissueLineages = req.query.tissueLineages || [];
