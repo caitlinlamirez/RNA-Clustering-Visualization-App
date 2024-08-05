@@ -5,8 +5,6 @@ import mongoose from 'mongoose';
 import axios from 'axios';
 import startCluster from './cluster.js';
 
-// For JS to Python
-import { spawn } from 'child_process';
 
 const router = express.Router(); // Sets up Express router
 // batch --> Allows user to batch multiple API Requests at once
@@ -245,7 +243,8 @@ router.post('/addData', async (req, res) => {
   }
 });
 
-
+/**
+ 
 router.post('/testPython', async (req, res) => {
   async function runPythonScript(scriptPath, args) {
     try {
@@ -293,5 +292,5 @@ router.post('/testCluster', async(req, res) => {
   startCluster()
   res.send('Cluster started!');
 })
-
+ */
 export { router as MainRouter };
