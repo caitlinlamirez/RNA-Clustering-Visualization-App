@@ -7,8 +7,6 @@ import startCluster from './cluster.js';
 
 
 const router = express.Router(); // Sets up Express router
-
-
 // batch --> Allows user to batch multiple API Requests at once
 router.post('/batch', async (req, res) => {
   const batchRequests = req.body;
@@ -115,7 +113,7 @@ router.get('/searchRanges2', async (req, res) => {
     const tissueLineagesStart = parseInt(req.query.tissueLineagesStart) || 0;
     const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd + 1) || 0;
     const geneSymbolsStart = parseInt(req.query.geneSymbolsStart) || 0;
-    const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd + 1) || 0;
+    const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd) || 0;
     const c_value = parseFloat(req.query.c_value);
 
     // Fetch all unique tissueLineages and geneSymbols from the database
@@ -181,49 +179,6 @@ router.get('/searchRanges2', async (req, res) => {
     res.json(err);
   }
 });
-
-/**  
-router.get('/getDefaultData', async (req, res) => {
-  try {
-    // Get tissueLineages and geneSymbols from query parameters
-    const rows = req.query.rows || 0;
-    const columns = req.query.columns || 0;
-    
-    // Fetch distinct gene symbols and tissue lineages
-    const distinctGeneSymbols = await RnaModel.find({}).distinct('gene_symbol');
-    const distinctTissueLineages = await RnaModel.find({}).distinct('lineage');
-
-    // Slice to default ranges (300 rows x 10 columns )
-    const slicedGeneSymbols = distinctGeneSymbols.slice(0,rows);
-    const slicedTissueLineages = distinctTissueLineages.slice(0,columns);
-
-    // Filter out the objects that contain the specified ranges
-    const defaultMapData = await RnaModel.find({
-      $and: [
-        { gene_symbol: { $in: slicedGeneSymbols } },
-        { lineage: { $in: slicedTissueLineages } }
-      ]
-    }).sort({ index: 1 });
-
-    const defaultNormalizedMapData = await normalizedRNAModel.find({
-      $and: [
-        { gene_symbol: { $in: slicedGeneSymbols } },
-        { lineage: { $in: slicedTissueLineages } }
-      ]
-    }).sort({ index: 1 });
-
-    res.json({
-      geneSet: distinctGeneSymbols,
-      tissueLineageSet: distinctTissueLineages,
-      defaultMapData: defaultMapData,
-      defaultNormalizedMapData: defaultNormalizedMapData
-    });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-**/
-
 
 router.get('/getDefaultData', async (req, res) => {
   try {

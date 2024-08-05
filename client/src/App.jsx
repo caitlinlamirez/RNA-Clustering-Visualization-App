@@ -8,7 +8,7 @@ const apiUrl = "https://rna-clustering-visualization-app-production.up.railway.a
 const App = () => {
     const defaultRows = 400;
     const defaultColumns = 10;
-    const defaultCValue = 0;
+    const defaultCValue = 0.1;
     const cValueChoices = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 
     const svgRef = useRef(null);
