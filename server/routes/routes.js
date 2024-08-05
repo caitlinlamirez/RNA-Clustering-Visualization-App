@@ -105,6 +105,80 @@ router.get('/searchRanges', async (req, res) => {
   }
 });
 
+// getValues --> Returns dictionary of objects containing selected ranges of tissueLineages and geneSymbols
+router.get('/searchRanges2', async (req, res) => {
+  try {
+    // Parse start and end values for rows and columns from query parameters
+    const tissueLineagesStart = parseInt(req.query.tissueLineagesStart) || 0;
+    const tissueLineagesEnd = parseInt(req.query.tissueLineagesEnd) || 0;
+    const geneSymbolsStart = parseInt(req.query.geneSymbolsStart) || 0;
+    const geneSymbolsEnd = parseInt(req.query.geneSymbolsEnd) || 0;
+    const c_value = parseFloat(req.query.c_value);
+
+    // Fetch all unique tissueLineages and geneSymbols from the database
+    const allTissueLineages = await RnaModel.distinct('lineage');
+    const allGeneSymbols = await RnaModel.distinct('gene_symbol');
+
+    // Slice the arrays based on start and end values
+    const tissueLineages = allTissueLineages.slice(tissueLineagesStart, tissueLineagesEnd);
+    const geneSymbols = allGeneSymbols.slice(geneSymbolsStart, geneSymbolsEnd);
+
+    // Get map that contain the specified ranges
+    const slicedMapData = await RnaModel.find({
+      $and: [
+        { gene_symbol: { $in: geneSymbols } },
+        { lineage: { $in: tissueLineages } },
+      ]
+    }).sort({ index: 1 });
+
+    const geneSymbolsToRemove = [];
+    geneSymbols.forEach(gene_sym => {
+      // Look for all objects with {gene_symbol: gene_sym} in defaultMapdata
+      const objectsWithGeneSymbol = slicedMapData.filter(obj => obj.gene_symbol === gene_sym);
+      const allRnaValuesSet = objectsWithGeneSymbol.flatMap(obj => obj.rna_value); // Get all RNA values within the gene_sym
+      
+      const valuesUnderc = [];
+      let numColumns = 0;
+      for (const val of allRnaValuesSet) {
+        numColumns += 1;
+        if (val < c_value) {
+          valuesUnderc.push(val);
+        }
+      }
+      if (valuesUnderc.length === numColumns) {
+        geneSymbolsToRemove.push(gene_sym);
+      }
+    });
+
+    const filteredGeneSymbols = geneSymbols.filter(symbol => !geneSymbolsToRemove.includes(symbol));
+    const filteredMap = await RnaModel.find({
+      $and: [
+        { gene_symbol: { $in: filteredGeneSymbols } },
+        { lineage: { $in: tissueLineages } }
+      ]
+    }).sort({ index: 1 });
+
+    const rowLabels = [...new Set(Object.values(filteredMap).flatMap((obj) => obj.gene_symbol))];
+    const columnLabels = [...new Set(Object.values(filteredMap).flatMap((obj) => obj.lineage))];
+
+    const normalizedMap = await normalizedRNAModel.find({
+      $and: [
+        { gene_symbol: { $in: filteredGeneSymbols } },
+        { lineage: { $in: tissueLineages } }
+      ]
+    }).sort({ index: 1 });
+  
+    res.json({
+      row_labels: rowLabels,
+      column_labels: columnLabels,
+      map_data: filteredMap,
+      normalized_map_data: normalizedMap
+    });
+  } catch (err) {
+    res.json(err);
+  }
+});
+
 /**  
 router.get('/getDefaultData', async (req, res) => {
   try {
