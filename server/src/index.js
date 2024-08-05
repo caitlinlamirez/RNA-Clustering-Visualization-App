@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import { configDotenv } from "dotenv";
 import {  MainRouter } from '../routes/routes.js';
 
-// Configure dotenv to load the .env file
+// Configured dotenv to load the .env file
 configDotenv();
 const databaseConnectionString = process.env.DATABASE_CONNECTION_STRING
 const databasePort = process.env.DATABASE_PORT
