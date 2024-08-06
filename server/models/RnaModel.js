@@ -5,7 +5,7 @@ const RNASchema = new mongoose.Schema({
     lineage: {type: String},
     gene_symbol: {type: String},
     rna_value: {type: Number}
-}, {collection:"rna_values"});
+}, {collection:"cols_10_rows_10000"});
 
 
-export const RnaModel = mongoose.model("rna_values", RNASchema); 
+export const RnaModel = mongoose.model("cols_10_rows_10000", RNASchema); 

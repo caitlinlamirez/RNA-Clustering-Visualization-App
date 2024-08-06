@@ -3,7 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { SAGE3Plugin } from "https://unpkg.com/@sage3/sageplugin@0.0.15/src/lib/sageplugin.js";
 import axios from 'axios'
+const portUrl = "http://localhost:3005/"
 const apiUrl = "https://rna-clustering-visualization-app-production.up.railway.app/"
+
+const serverUrl = apiUrl;
 
 const App = () => {
     const defaultRows = 400;
@@ -58,7 +61,7 @@ const App = () => {
             setNormalizedMap(default_normalized_map);
           } else {
             // If data is not stored, fetch it from the server
-            const response = await axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/getDefaultData', {
+            const response = await axios.get(`${serverUrl}values/getDefaultData`, {
               params: {
                 rows: trimmedRows,
                 columns: trimmedColumns,
@@ -257,7 +260,7 @@ const App = () => {
         : [];
 
       // Make a GET request to the server with the query parameters
-      axios.get('https://rna-clustering-visualization-app-production.up.railway.app/values/searchRanges2', {
+      axios.get(`${serverUrl}values/searchRanges2`, {
           params: {
             geneSymbolsStart: start1,
             geneSymbolsEnd: end1,
@@ -335,8 +338,8 @@ const App = () => {
           <div className='header'>
             <div className='heatmap-header'>
             <h1> {isNormMapDisplayed ? 'Normalized Gene Color Map' : 'Gene Expression Percentage Matrix'}</h1>
-            <p>Rows: {trimmedRows} </p>
-            <p>Columns: {trimmedColumns}</p>
+            <p>Gene Symbols: {trimmedRows} </p>
+            <p>Tissue Lineages: {trimmedColumns}</p>
             </div>
 
             <div className='menubar'>
@@ -394,7 +397,7 @@ const App = () => {
               </div>
               <div className='filter-form-row'>
                 <div className='range-block'>
-                  <label>C-value: </label>
+                  <label>Minimum RNA Percentage for each Tissue Lineage: </label>
                   <select id="c_value_select" defaultValue = {cValue}>
                   {Array.from(cValueChoices).map((c, index) => (
                       <option key={index} value={c}>
